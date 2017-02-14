@@ -21,12 +21,16 @@ dataTypes : function (value) {
             return value;
 
         case "object":
-            if (typeof value[2] !== "undefined") {
+            if (value === null) {
+                return "no value";
+            }
+            else if (typeof value[2] !== "undefined") {
                 return value[2];
             } else {
-                return undefined;
+                return undefined
             }
             break;
+
         case "function":
             return value(true);
             

@@ -3,6 +3,10 @@ var val = require("../app/dataTypes.js");
 describe("Data types tests ", function() {
   describe("Case for some falsy values", function() {
 
+    it("should return 'no value' for null", function() {
+      expect(val.dataTypes(null)).toEqual('no value');
+    });
+
     it("should return 'no value' for undefined", function() {
       expect(val.dataTypes(undefined)).toEqual('no value');
     });
